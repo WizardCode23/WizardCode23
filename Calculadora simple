@@ -1,0 +1,48 @@
+class Calcul:
+    def sumar(self, x, y):
+        return x + y
+
+    def restar(self, x, y):
+        return x - y
+
+    def multiplicar(self, x, y):
+        return x * y
+
+    def dividir(self, x, y):
+        if y == 0:
+            return "No se divide por cero"
+        return x / y
+
+def main():
+    calc = Calcul()
+
+    while True:
+        print("Opciones:")
+        print("1. Sumar")
+        print("2. Restar")
+        print("3. Multiplicar")
+        print("4. Dividir")
+        print("5. Salir")
+
+        opcion = input("Ingrese el número : ")
+
+        if opcion == '5':
+            print("¡Hasta luego!")
+            break
+
+        num1 = float(input("Ingrese el primer número: "))
+        num2 = float(input("Ingrese el segundo número: "))
+
+        if opcion == '1':
+            print("Resultado: ", calc.sumar(num1, num2))
+        elif opcion == '2':
+            print("Resultado: ", calc.restar(num1, num2))
+        elif opcion == '3':
+            print("Resultado: ", calc.multiplicar(num1, num2))
+        elif opcion == '4':
+            print("Resultado: ", calc.dividir(num1, num2))
+        else:
+            print("Opción no válida")
+
+if __name__ == "__main__":
+    main()
